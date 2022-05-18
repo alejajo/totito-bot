@@ -70,6 +70,16 @@ def read_board() -> list:
 
 
 def decide_move(board: list, player_id: str) -> [int, int]:
+
+    ###############
+   #first move#
+   ###############
+
+ if board[0][0] == "-" and board[0][1] == "-" and board[0][2] == "-" and board[1][0] == "-" and board[1][1] == "-" and board[1][2] == "-" and board[2][0] == "-" and board[2][1] == "-" and board[2][2] == "-":
+       row = 1
+       column= 1
+       return[row, column]
+
 def validate_move(board: list, move: list) -> bool:
     """
     Checks if the desired next move hits an empty position.
