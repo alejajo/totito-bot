@@ -80,6 +80,356 @@ def decide_move(board: list, player_id: str) -> [int, int]:
        column= 1
        return[row, column]
 
+   ###############
+   #just one move#
+   ###############
+    #######
+    ###BLOCK
+    #########
+
+ if player_id == "O" and board[1][1] == "X" and board[1][0] == "X" and board[1][2] == "-":
+     row = 1
+     column = 2
+     return [row, column]
+ elif player_id == "O" and board[1][1] == "X" and board[1][0] == "X" or "-" and board[1][2] == "-":
+     row = 1
+     column = 2
+     return [row, column]
+ if player_id == "O" and board[1][1] == "X" and board[1][2] == "X" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column] 
+ elif player_id == "O" and board[1][1] == "X" and board[1][2] == "X" or "-" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column]
+ if player_id == "O" and board[1][2] == "X" and board[1][0] == "X" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ elif player_id == "O" and board[1][2] == "X" and board[1][0] == "X" or "-" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ if player_id == "O" and board[2][1] == "X" and board[2][0] == "X" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ elif player_id == "O" and board[2][1] == "X" and board[2][0] == "X" or "-" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ if player_id == "O" and board[2][2] == "X" and board[2][1] == "X" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ elif player_id == "O" and board[2][2] == "X" and board[2][1] == "X" or "-" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ if player_id == "O" and board[2][0] == "X" and board[2][2] == "X"  and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ elif player_id == "O" and board[2][0] == "X" and board[2][2] == "X" or "-" and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ if player_id == "O" and board[0][1] == "X" and board[0][0] == "X" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column]
+ elif player_id == "O" and board[0][1] == "X" and board[0][0] == "X" or "-" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column]
+ if player_id == "O" and board[0][2] == "X" and board[0][1] == "X" and  board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ elif player_id == "O" and board[0][2] == "X" and board[0][1] == "X" or "-" and  board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ if player_id == "O" and board[0][0] == "X" and board[0][2] == "X"  and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column]
+ elif player_id == "O" and board[0][0] == "X" and board[0][2] == "X" or "-" and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column]
+ if player_id == "O" and board[1][1] == "X" and board[0][1] == "X" and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ elif player_id == "O" and board[1][1] == "X" and board[0][1] == "X" or "-" and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ if player_id == "O" and board[2][1] == "X" and board[1][1] == "X" and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column] 
+ elif player_id == "O" and board[2][1] == "X" and board[1][1] == "X" or "-" and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column] 
+ if player_id == "O" and board[0][1] == "X" and board[2][1] == "X" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ elif player_id == "O" and board[0][1] == "X" and board[2][1] == "X" or "-" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ if player_id == "O" and board[1][2] == "X" and board[0][2] == "X" or "-" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ elif player_id == "O" and board[1][2] == "X" and board[0][2] == "X" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ if player_id == "O" and board[2][2] == "X" and board[1][2] == "X" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ elif player_id == "O" and board[2][2] == "X" and board[1][2] == "X" or "-" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ if player_id == "O" and board[0][2] == "X" and board[2][2] == "X" and board[1][2] == "-":
+      row = 1
+      column = 2
+      return [row, column]
+ elif player_id == "O" and board[0][2] == "X" and board[2][2] == "X" or "-" and board[1][2] == "-":
+      row = 1
+      column = 2
+      return [row, column]
+ if player_id == "O" and board[1][0] == "X" and board[0][0] == "X" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column]
+ elif player_id == "O" and board[1][0] == "X" and board[0][0] == "X" or "-" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column]
+ if player_id == "O" and board[2][0] == "X" and board[1][0] == "X" and board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ elif player_id == "O" and board[2][0] == "X" and board[1][0] == "X" or "-" and board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ if player_id == "O" and board[0][0] == "X" and board[2][0] == "X" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column]
+ elif player_id == "O" and board[0][0] == "X" and board[2][0] == "X" or "-" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column]
+ if player_id == "O" and board[0][2] == "X" and board[1][1] == "X" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ elif player_id == "O" and board[0][2] == "X" and board[1][1] == "X" or "-" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ if player_id == "O" and board[1][1] == "X" and board[2][0] == "X" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ elif player_id == "O" and board[1][1] == "X" and board[2][0] == "X" or "-" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ if player_id == "O" and board[2][0] == "X" and board[0][2] == "X" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column] 
+ elif player_id == "O" and board[2][0] == "X" and board[0][2] == "X" or "-" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]       
+
+
+
+
+
+ if player_id == "X" and board[1][1] == "O" and board[1][0] == "O" and board[1][2] == "-":
+     row = 1
+     column = 2
+     return [row, column]
+ elif player_id == "X" and  board[1][1] == "O" and board[1][0] == "O" or "-" and board[1][2] == "-":
+     row = 1
+     column = 2
+     return [row, column]
+ if player_id == "X" and board[1][2] == "O" and board[1][1] == "0O" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column] 
+ elif player_id == "X" and board[1][2] == "O" and board[1][1] == "O" or "-" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column]
+ if player_id == "X" and board[1][0] == "O" and board[1][2] == "O" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ elif player_id == "X" and board[1][0] == "O" and board[1][2] == "O" or "-" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ if player_id == "X" and board[2][1] == "O" and board[2][0] == "O" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ elif player_id == "X" and board[2][1] == "O" and board[2][0] == "O" or "-" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ if player_id == "X" and board[2][2] == "O" and board[2][1] == "O" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ elif player_id == "X" and board[2][2] == "O" and board[2][1] == "O" or "-" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ if player_id == "X" and board[2][0] == "O" and board[2][2] == "O"  and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ elif player_id == "X" and board[2][0] == "O" and board[2][2] == "O" or "-" and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ if player_id == "X" and board[0][1] == "O" and board[0][0] == "O" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column]
+ elif player_id == "X" and board[0][1] == "O" and board[0][0] == "O" or "-" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column]
+ if player_id == "X" and board[0][2] == "O" and board[0][1] == "O" and  board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ elif player_id == "X" and board[0][2] == "O" and board[0][1] == "O" or "-" and  board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ if player_id == "X" and board[0][0] == "O" and board[0][2] == "O"  and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column]
+ elif player_id == "X" and board[0][0] == "O" and board[0][2] == "O" or "-" and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column]
+ if player_id == "X" and board[1][1] == "O" and board[0][1] == "O" and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ elif player_id == "X" and board[1][1] == "O" and board[0][1] == "O" or "-" and board[2][1] == "-":
+      row = 2
+      column = 1
+      return [row, column]
+ if player_id == "X" and board[2][1] == "O" and board[1][1] == "O" and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column] 
+ elif player_id == "X" and board[2][1] == "O" and board[1][1] == "O" or "-" and board[0][1] == "-":
+      row = 0
+      column = 1
+      return [row, column] 
+ if player_id == "X" and board[0][1] == "O" and board[2][1] == "O" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ elif player_id == "X" and board[0][1] == "O" and board[2][1] == "O" or "-" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+ if player_id == "X" and board[1][2] == "O" and board[0][2] == "O" or "-" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ elif player_id == "X" and board[1][2] == "O" and board[0][2] == "O" and board[2][2] == "-":
+      row = 2
+      column = 2
+      return [row, column]
+ if player_id == "X" and board[2][2] == "O" and board[1][2] == "O" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ elif player_id == "X" and board[2][2] == "O" and board[1][2] == "O" or "-" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ if player_id == "X" and board[0][2] == "O" and board[2][2] == "O" and board[1][2] == "-":
+      row = 1
+      column = 2
+      return [row, column]
+ elif player_id == "X" and board[0][2] == "O" and board[2][2] == "O" or "-" and board[1][2] == "-":
+      row = 1
+      column = 2
+      return [row, column]
+ if player_id == "X" and board[1][0] == "O" and board[0][0] == "O" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column]
+ elif player_id == "X" and board[1][0] == "O" and board[0][0] == "O" or "-" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column]
+ if player_id == "X" and board[2][0] == "O" and board[1][0] == "O" and board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ elif player_id == "X" and board[2][0] == "O" and board[1][0] == "O" or "-" and board[0][0] == "-":
+      row = 0
+      column = 0
+      return [row, column] 
+ if player_id == "X" and board[0][0] == "O" and board[2][0] == "O" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column]
+ elif player_id == "X" and board[0][0] == "O" and board[2][0] == "O" or "-" and board[1][0] == "-":
+      row = 1
+      column = 0
+      return [row, column]
+ if player_id == "X" and board[0][2] == "O" and board[1][1] == "O" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ elif player_id == "X" and board[0][2] == "O" and board[1][1] == "O" or "-" and board[2][0] == "-":
+      row = 2
+      column = 0
+      return [row, column] 
+ if player_id == "X" and board[1][1] == "O" and board[2][0] == "O" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ elif player_id == "X" and board[1][1] == "O" and board[2][0] == "O" or "-" and board[0][2] == "-":
+      row = 0
+      column = 2
+      return [row, column] 
+ if player_id == "X" and board[2][0] == "O" and board[0][2] == "O" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column] 
+ elif player_id == "X" and board[2][0] == "O" and board[0][2] == "O" or "-" and board[1][1] == "-":
+      row = 1
+      column = 1
+      return [row, column]
+
+      
 def validate_move(board: list, move: list) -> bool:
     """
     Checks if the desired next move hits an empty position.
